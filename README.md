@@ -6,6 +6,9 @@ The following command will install/update the newest version of the script.
 
 ```bash
 pip install --force-reinstall --no-cache-dir git+https://github.com/torstees/doi-view-builder
+
+or for developers working on the script itself,
+pip install -e .
 ```
 
 # Usage
