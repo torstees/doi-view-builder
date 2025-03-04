@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doiviewer"
+authors = [
+    {name = "Eric Torstenson", email="eric.s.torstenson@vumc.org"},
+    {name="Yelena Cox", email="yelena.cox@vumc.org"}
+]
+description = "DOI View Builder."
+readme = "README.md"
+requires-python = ">3.10"
+keywords = ["DOI", "Research Data"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+dynamic = ["version"]
+
+[tool.setuptools.packages.find]
+where = ["src"]  # list of folders that contain the packages (["."] by default)
+
+
+[project.scripts]
+doi_view_builder = "make_doi:main"
