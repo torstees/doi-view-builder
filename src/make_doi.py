@@ -246,12 +246,13 @@ def main():
         # Open file using json library and convert that into a string.
         # I recommend using indent=2 when converting to a string for readability.
         # See https://docs.python.org/3/library/json.html
-        {your code here}
+        json_data = json.load(doi_json)
+        json_string = json.dumps(json_data, indent=2)
 
         # Using the html template above, html_template, use basic python text
         # replacement to replace the variable $JSON_DATA_HERE with the string version
         # of the actual DOI JSON data
-        {your code here}
+        html_content = html_template.replace("$JSON_DATA_HERE", json_string)
 
         # Using the Path library, we can create an HTML filename based on the
         # original filename.
