@@ -239,6 +239,9 @@ def main():
     parser.add_argument(
         "files", nargs="+", type=FileType("rt"), help="JSON DOI files for HTML viewing"
     )
+    parser.add_argument(
+      "-o", "--output-filename", default="json_doi.html"
+    )
     args = parser.parse_args()
 
     # Iterate over each of the JSON files provided by user
